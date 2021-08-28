@@ -10,48 +10,46 @@
   </head>
 
   <body>
-    <div class="container">
-      <form action="" class="searchForm">
-        <div class="searchForm-row">
-          <label for="searchForm-origin">From</label>
-          <input type="text" id="searchForm-origin" name="origin"/>
-        </div>
-        <div class="searchForm-row">
-          <label for="searchForm-destination">To</label>
-          <input type="text" id="searchForm-destination" name="destination"/>
-        </div>
-        <div class="searchForm-row">
-          <fieldset>
-            <legend></legend>
-            <input type="radio"
-                   name="fareType"
-                   id="searchForm-roundTrip"
-                   value="Round-trip"
-                   checked>
-            <label for="searchForm-roundTrip">Round-trip</label>
-            <input type="radio"
-                   name="fareType"
-                   id="searchForm-oneWay"
-                   value="One-way">
-            <label for="One-way">One-way</label>
-          </fieldset>
-        </div>
-        <div class="searchForm-row">
-          <input type="text" name="departDate" id="searchForm-departDate">
-          <input type="text" name="returnDate" id="searchForm-returnDate">
-        </div>
-        <div class="searchForm-row">
-          <select name="options" id="searchForm-options">
-            <option value="economy">Economy</option>
-            <option value="business">Business</option>
-            <option value="pm">Premium Economy</option>
-            <option value="first">First</option>
-          </select>
-        </div>
-        <div class="searchForm-row">
-          <input type="submit" value="Find deals" />
-        </div>
-      </form>
-    </div>
+    <form action="" class="searchForm">
+      <div class="searchForm-row">
+        <label for="searchForm-origin">From</label>
+        <input type="text" id="searchForm-origin" name="origin"/>
+      </div>
+      <div class="searchForm-row">
+        <label for="searchForm-destination">To</label>
+        <input type="text" id="searchForm-destination" name="destination"/>
+      </div>
+      <div class="searchForm-row">
+        <fieldset>
+          <legend></legend>
+          <input type="radio"
+                  name="fareType"
+                  id="searchForm-roundTrip"
+                  value="Round-trip"
+                  checked>
+          <label for="searchForm-roundTrip">Round-trip</label>
+          <input type="radio"
+                  name="fareType"
+                  id="searchForm-oneWay"
+                  value="One-way">
+          <label for="One-way">One-way</label>
+        </fieldset>
+      </div>
+      <div class="searchForm-row">
+        <input type="text" name="departDate" id="searchForm-departDate">
+        <input type="text" name="returnDate" id="searchForm-returnDate">
+      </div>
+      <div class="searchForm-row">
+        <select name="options" id="searchForm-options">
+          <option value="economy">Economy</option>
+          <option value="business">Business</option>
+          <option value="pm">Premium Economy</option>
+          <option value="first">First</option>
+        </select>
+      </div>
+      <div class="searchForm-row">
+        <input type="submit" value="Find deals" />
+      </div>
+    </form>
   </body>
 </html>

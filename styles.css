@@ -15,18 +15,93 @@ html {
 *,
 *::before,
 *::after {
+  /* Display & Box Model */
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+body {
+  /* Display & Box Model */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchForm {
+  /* Display & Box Model */
+  width: 100%;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.searchForm-row {
+  /* Display & Box Model */
+  padding: 0 .5rem;
+}
+
+.searchForm-row:first-child {
+  /* Display & Box Model */
+  margin-top: 1.5rem;
+}
+
+.searchForm-row {
+  margin-top: .5rem;
+}
+
+.searchForm-row:nth-child(4) {
+  display: flex;
+}
+
+.searchForm label {
+  /* Display & Box Model */
+  display: none;
+}
+
+fieldset {
+  padding: 1rem 0;
+  border: none;
+}
+
+.searchForm fieldset > label {
+  display: initial;
+}
+
+input[type="text"] {
+  /* Display & Box Model */
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+
+  /* Other */
+  background: hsla(0, 0%, 90%, 1.0);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+select {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 100%;
 }
 
 /********************
 || Utilities
 *********************/
 .noBullets {
+  /* Other */
   list-style-type: none;
 }
 
 .troubleshooting {
+  /* Other */
   outline: 1px solid red;
 }

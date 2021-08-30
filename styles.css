@@ -76,13 +76,20 @@ input[type="text"] {
   border-radius: .5rem;
 
   /* Other */
-  background: hsla(0, 0%, 90%, 1.0);
-  font-size: 1.6rem;
+  background-color: hsla(0, 0%, 90%, 1.0);
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
 input[type="text"]:focus {
   outline: none;
+}
+
+input[name="destination"],
+input[name="origin"] {
+  background: url('assets/map-marker-alt-solid.svg') no-repeat 1% 5px;
+  background-size: 29px 29px;
+  padding-left: 4rem;
 }
 
 select {

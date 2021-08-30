@@ -33,21 +33,22 @@ body {
   /* Display & Box Model */
   width: 100%;
   margin: 0 1rem;
+  padding: 0 .5rem;
   font-size: 1.5rem;
 }
 
 .searchForm-row {
   /* Display & Box Model */
-  padding: 0 .5rem;
+  margin-top: .5rem;
+
+  /* Other */
+  background-color: hsla(0, 0%, 90%, 1.0);
+  border-radius: 5px;
 }
 
 .searchForm-row:first-child {
   /* Display & Box Model */
   margin-top: 1.5rem;
-}
-
-.searchForm-row {
-  margin-top: .5rem;
 }
 
 .searchForm-row:nth-child(4) {
@@ -73,12 +74,11 @@ input[type="text"] {
   width: 100%;
   padding: 1rem;
   border: none;
-  border-radius: .5rem;
 
   /* Other */
-  background-color: hsla(0, 0%, 90%, 1.0);
   font-weight: bold;
   font-size: 1.6rem;
+  background-color: initial;
 }
 
 input[type="text"]:focus {
@@ -88,8 +88,12 @@ input[type="text"]:focus {
 input[name="destination"],
 input[name="origin"] {
   background: url('assets/map-marker-alt-solid.svg') no-repeat 1% 5px;
-  background-size: 29px 29px;
-  padding-left: 4rem;
+  background-size: 25px 25px;
+  padding-left: 4.5rem;
+}
+
+input::placeholder {
+  color: black;
 }
 
 select {

@@ -37,6 +37,9 @@ body {
 }
 
 .searchForm-row {
+  /* Positioning */
+  position: relative;
+
   /* Display & Box Model */
   padding: 0 .5rem;
 }
@@ -68,10 +71,23 @@ fieldset {
   display: initial;
 }
 
+i {
+  /* Positioning */
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+
+  /* Display & Box Model */
+  padding: .5rem 1rem;
+
+  /* Other */
+  font-size: 2.2rem;
+}
+
 input[type="text"] {
   /* Display & Box Model */
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 3.6rem;
   border: none;
   border-radius: .5rem;
 
@@ -79,10 +95,15 @@ input[type="text"] {
   background: hsla(0, 0%, 90%, 1.0);
   font-size: 1.6rem;
   font-weight: bold;
+  color: hsla(0, 0%, 10%, 1.0);
 }
 
 input[type="text"]:focus {
   outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: hsla(0, 0%, 10%, 1.0);
 }
 
 select {

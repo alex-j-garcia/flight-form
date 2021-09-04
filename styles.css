@@ -29,6 +29,11 @@ body {
   align-items: center;
 }
 
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 .searchForm {
   /* Display & Box Model */
   width: 100%;
@@ -61,12 +66,20 @@ body {
 }
 
 fieldset {
+  /* Display & Box Model */
   padding: 1rem 0;
   border: none;
+
+  /* Other */
+  background-color: white;
 }
 
 .searchForm fieldset > label {
+  /* Display & Box Model */
   display: initial;
+
+  /* Other */
+  color: hsla(0, 0%, 33%, 0.931);
 }
 
 input[type="text"] {
@@ -82,25 +95,69 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
+  /* Other */
   outline: none;
+}
+
+input[type="radio"] {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid black;
+  border-radius: 50px;
+  vertical-align: -3px;
+  margin-right: 1rem;
+}
+
+input[type="radio"]:checked::before {
+  /* Positioning */
+  position: absolute;
+  left: 2px;
+  top: 2px;
+
+  /* Display & Box Model  */
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50px;
+
+  /* Other */
+  background-color: black;
+  transform: scale(.75, .75);
+}
+
+input[type="radio"]:last-of-type {
+  /* Display & Box Model */
+  margin-left: 1.5rem;
 }
 
 input[name="destination"],
 input[name="origin"] {
+  /* Display & Box Model */
+  padding-left: 4.5rem;
+
+  /* Other */
   background: url('assets/map-marker-alt-solid.svg') no-repeat 1% 5px;
   background-size: 25px 25px;
-  padding-left: 4.5rem;
 }
 
 input::placeholder {
+  /* Other */
   color: black;
 }
 
 select {
+  /* Display & Box Model */
   width: 100%;
 }
 
 input[type="submit"] {
+  /* Display & Box Model */
   width: 100%;
 }
 

@@ -28,9 +28,26 @@ html {
 body {
   /* Display & Box Model */
   height: 100vh;
+  padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* Other */
+  background-image: url('assets/sky-blue-wide.jpeg');
+  background-size: cover;
+}
+
+h1 {
+  /* Display & Box Model */
+  margin-bottom: 5rem;
+
+  /* Other */
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 button, input, select, textarea {
@@ -41,9 +58,14 @@ button, input, select, textarea {
 .searchForm {
   /* Display & Box Model */
   width: 100%;
+  min-width: 300px;
   margin: 0 1rem;
-  padding: 0 .5rem;
+  padding: 0 .75rem 10rem;
   font-size: 1.5rem;
+  border-radius: 5px;
+
+  /* Other */
+  background: white;
 }
 
 .searchForm-row {
@@ -230,11 +252,11 @@ button {
   background-color: var(--button-background);
   color: white;
   font-family: Tahoma, Helvetica, sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 5px 8px 0 hsla(0, 0%, 0%, 0.04);
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.08rem;
 }
 
 button:hover {

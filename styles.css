@@ -51,6 +51,7 @@ h1 {
 }
 
 button, input, select, textarea {
+  /* Other */
   font-family: inherit;
   font-size: 100%;
 }
@@ -73,7 +74,6 @@ button, input, select, textarea {
   margin-top: .5rem;
 
   /* Other */
-  background-color: var(--background-gray);
   border-radius: 5px;
 }
 
@@ -118,11 +118,11 @@ input[type="text"] {
   width: 100%;
   padding: 1rem;
   border: none;
+  border-radius: 5px;
 
   /* Other */
   font-weight: bold;
   font-size: 1.6rem;
-  background-color: initial;
 }
 
 input[name="destination"],
@@ -192,6 +192,21 @@ input[name="returnDate"] {
   background-size: 25px 25px;
 }
 
+input[name="departDate"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[name="returnDate"] {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  box-shadow: -4px 0 5px -5px hsla(0, 0%, 0%, 0.115);
+}
+
+.dates {
+  background-color: var(--background-gray);
+}
+
 input[name="departDate"]::placeholder,
 input[name="returnDate"]::placeholder {
   color: var(--text-color);
@@ -210,10 +225,13 @@ select {
   border: none;
 
   /* Other */
-  background-color: var(--background-gray);
   color: var(--text-color);
   font-weight: bold;
   outline: none;
+}
+
+input[type="text"], select {
+  background-color: var(--background-gray);
 }
 
 .select-wrapper {
@@ -277,4 +295,28 @@ button:hover {
 .troubleshooting {
   /* Other */
   outline: 1px solid red;
+}
+
+/********************
+|| Media Queries
+*********************/
+
+@media only screen and (min-width: 625px) {
+  .searchForm {
+    padding: 2rem 3rem 10rem;
+  }
+
+  .searchForm label {
+    /* Display & Box Model */
+    display: block;
+    margin-bottom: .5rem;
+
+    /* Other */
+    color: var(--text-color);
+    font-size: 1.3rem;
+  }
+
+  .searchForm-row {
+    margin-bottom: 1.5rem;
+  }
 }

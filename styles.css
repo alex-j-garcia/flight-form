@@ -68,6 +68,7 @@ button, input, select, textarea {
 
   /* Other */
   background: white;
+  box-shadow: 0 5px 5px 0 hsla(0, 0%, 0%, 0.04);
 }
 
 .searchForm-row {

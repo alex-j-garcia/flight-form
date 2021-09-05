@@ -286,6 +286,13 @@ button:hover {
   box-shadow: none;
 }
 
+.select-wrapper,
+button,
+.searchForm-row:first-of-type,
+.searchForm-row:nth-child(2) {
+  box-shadow: 0 5px 5px -5px hsla(0, 0%, 0%, 0.08);
+}
+
 /********************
 || Utilities
 *********************/

@@ -11,6 +11,8 @@ html {
 
   /* CSS Variables */
   --text-color: hsla(0, 0%, 33%, 0.931);
+  --background-gray: hsla(0, 0%, 90%, 1.0);
+  --black: hsla(0, 0%, 17%, 1.0);
 }
 
 *,
@@ -48,7 +50,7 @@ button, input, select, textarea {
   margin-top: .5rem;
 
   /* Other */
-  background-color: hsla(0, 0%, 90%, 1.0);
+  background-color: var(--background-gray);
   border-radius: 5px;
 }
 
@@ -95,9 +97,26 @@ input[type="text"] {
   background-color: initial;
 }
 
+input[name="destination"],
+input[name="origin"] {
+  /* Display & Box Model */
+  padding-left: 4.5rem;
+
+  /* Other */
+  background: url('assets/map-marker-alt-solid.svg') no-repeat 1% 5px;
+  background-size: 25px 25px;
+}
+
 input[type="text"]:focus {
   /* Other */
   outline: none;
+}
+
+input[type="radio"],
+select {
+  /* Display & Box Model */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 input[type="radio"] {
@@ -105,8 +124,6 @@ input[type="radio"] {
   position: relative;
 
   /* Display & Box Model */
-  -webkit-appearance: none;
-  appearance: none;
   width: 2rem;
   height: 2rem;
   border: 2px solid black;
@@ -137,16 +154,6 @@ input[type="radio"]:last-of-type {
   margin-left: 1.5rem;
 }
 
-input[name="destination"],
-input[name="origin"] {
-  /* Display & Box Model */
-  padding-left: 4.5rem;
-
-  /* Other */
-  background: url('assets/map-marker-alt-solid.svg') no-repeat 1% 5px;
-  background-size: 25px 25px;
-}
-
 input[name="departDate"],
 input[name="returnDate"] {
   /* Display & Box Model */
@@ -164,12 +171,43 @@ input[name="returnDate"]::placeholder {
 
 input::placeholder {
   /* Other */
-  color: black;
+  color: var(--black);
 }
 
 select {
   /* Display & Box Model */
   width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+
+  /* Other */
+  background-color: var(--background-gray);
+  color: var(--text-color);
+  font-weight: bold;
+  outline: none;
+}
+
+.select-wrapper {
+  /* Positioning */
+  position: relative;
+}
+
+.select-wrapper::after {
+  /* Positioning */
+  position: absolute;
+  top: 1rem;
+  right: 0;
+
+  /* Display & Box Model */
+  content: '▼';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+
+  /* Other */
+  color: var(--black);
+  pointer-events: none;
 }
 
 input[type="submit"] {
